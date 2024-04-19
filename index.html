@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SAEs</title>
+  <style>
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Visualization Gallery</h1>
+  <ul id="visualizationList"></ul>
+  <iframe id="vizFrame" src=""></iframe>
+
+  <script>
+    // Array of visualization file names
+    const visualizations = ['viz1.html', 'viz2.html'];
+
+    // Get the visualization list and iframe elements
+    const vizList = document.getElementById('visualizationList');
+    const vizFrame = document.getElementById('vizFrame');
+
+    // Generate the list of visualizations dynamically
+    visualizations.forEach(function(viz) {
+      const listItem = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = '#';
+      link.textContent = viz;
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        vizFrame.src = 'viz/' + viz;
+      });
+      listItem.appendChild(link);
+      vizList.appendChild(listItem);
+    });
+  </script>
+</body>
+</html>
