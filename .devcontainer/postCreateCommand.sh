@@ -3,7 +3,7 @@
 # Install dependencies
 pip install git+https://github.com/callummcdougall/eindex.git
 pip install -qU huggingface_hub
-pip install -q transformer_lens sae-lens wandb accelerate
+pip install -q transformer_lens sae-lens==0.1.0 wandb accelerate
 
 # Install mergekit dependencies inside venv
 git clone -q https://github.com/cg123/mergekit.git
