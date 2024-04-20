@@ -15,9 +15,29 @@
   <script>
     // Array of visualization file paths
     const visualizations = [
-      'qwen1.5-0.5b/layer-18/data_33802.html',
-      'qwen1.5-0.5b/layer-2/data_9565.html',
-      // Add more visualization file paths here
+        // Layer 2
+        'qwen1.5-0.5b/layer-2/data_3570.html',
+        'qwen1.5-0.5b/layer-2/data_9106.html',
+        'qwen1.5-0.5b/layer-2/data_9565.html',
+        'qwen1.5-0.5b/layer-2/data_10861.html',
+        'qwen1.5-0.5b/layer-2/data_21108.html',
+        'qwen1.5-0.5b/layer-2/data_37132.html',
+        'qwen1.5-0.5b/layer-2/data_47713.html',
+        'qwen1.5-0.5b/layer-2/data_48868.html',
+        'qwen1.5-0.5b/layer-2/data_51123.html',
+        'qwen1.5-0.5b/layer-2/data_58292.html',
+        // Layer 18
+        'qwen1.5-0.5b/layer-18/data_6926.html',
+        'qwen1.5-0.5b/layer-18/data_9539.html',
+        'qwen1.5-0.5b/layer-18/data_10804.html',
+        'qwen1.5-0.5b/layer-18/data_13698.html',
+        'qwen1.5-0.5b/layer-18/data_26988.html',
+        'qwen1.5-0.5b/layer-18/data_28362.html',
+        'qwen1.5-0.5b/layer-18/data_29865.html',
+        'qwen1.5-0.5b/layer-18/data_33802.html',
+        'qwen1.5-0.5b/layer-18/data_60564.html',
+        'qwen1.5-0.5b/layer-18/data_65410.html',
+        // Add more visualization file paths here
     ];
     
     const visualizationList = document.getElementById('visualizationList');
@@ -27,7 +47,7 @@
       const listItem = document.createElement('li');
       const link = document.createElement('a');
       link.href = viz;
-      link.textContent = viz;
+      link.textContent = 'viz/' + viz;
       listItem.appendChild(link);
       visualizationList.appendChild(listItem);
     });
