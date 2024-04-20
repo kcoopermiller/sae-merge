@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sparse Autoencoders</title>
+  <style>
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sparse Autoencoders</h1>
+  <ul id="visualizationList">
+    {% for viz in visualizations %}
+      <li><a href="#" onclick="loadVisualization('{{ viz }}')">{{ viz }}</a></li>
+    {% endfor %}
+  </ul>
+  <iframe id="vizFrame" src=""></iframe>
+
+  <script>
+    function loadVisualization(viz) {
+      document.getElementById('vizFrame').src = '/' + viz;
+    }
+  </script>
+</body>
+</html>
