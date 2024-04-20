@@ -46,8 +46,8 @@
     visualizations.forEach(function(viz) {
       const listItem = document.createElement('li');
       const link = document.createElement('a');
-      link.href = viz;
-      link.textContent = 'viz/' + viz;
+      link.href = 'viz/' + viz;
+      link.textContent = viz;
       listItem.appendChild(link);
       visualizationList.appendChild(listItem);
     });
