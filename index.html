@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Visualization Gallery</title>
+  <style>
+    /* Add your custom styles here */
+  </style>
+</head>
+<body>
+  <h1>Visualization Gallery</h1>
+  <ul id="visualizationList">
+    <!-- List of visualizations will be dynamically generated here -->
+  </ul>
+  
+  <script>
+    // Array of visualization file paths
+    const visualizations = [
+      'qwen1.5-0.5b/layer-18/data_33802.html',
+      'qwen1.5-0.5b/layer-2/data_9565.html',
+      // Add more visualization file paths here
+    ];
+    
+    const visualizationList = document.getElementById('visualizationList');
+    
+    // Generate the list of visualizations dynamically
+    visualizations.forEach(function(viz) {
+      const listItem = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = viz;
+      link.textContent = viz;
+      listItem.appendChild(link);
+      visualizationList.appendChild(listItem);
+    });
+  </script>
+</body>
+</html>
